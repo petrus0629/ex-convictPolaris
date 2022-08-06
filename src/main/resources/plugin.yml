@@ -1,0 +1,6 @@
+name: Convict
+version: '${project.version}'
+main: convict.convict.Convict
+
+commands:
+  전과조회:
