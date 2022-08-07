@@ -1,9 +1,22 @@
 package convict.convict;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Convict extends JavaPlugin {
 
@@ -16,39 +29,5 @@ public final class Convict extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-    }
-
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player p = (Player) sender;
-
-        String playerName = p.getPlayerListName();
-        if (command.getName().equalsIgnoreCase("전과조회")) {
-            p.sendMessage("작동성공");
-            p.sendMessage("");
-            p.sendMessage(playerName);
-
-
-
-        }
-
-        return true;
-        /* if(args.length != 2){
-            Player p = (Player) sender;
-            if(command.getName().equalsIgnoreCase("전과조회")){
-                p.sendMessage(ChatColor.BOLD + "====================");
-                p.sendMessage("<폴라리스 전과 시스템>");
-                p.sendMessage("EX) /전과조회 <닉네임>");
-                p.sendMessage(ChatColor.BOLD + "====================");
-            }
-        }
-
-        String assault = "폭행";
-        String kill = "살인";
-        String playername;
-        Player p = Bukkit.getPlayer(playername);
-
-        return true;*/
-
     }
 }

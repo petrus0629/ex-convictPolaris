@@ -3,4 +3,4 @@ version: '${project.version}'
 main: convict.convict.Convict
 
 commands:
-  전과조회:
+  전과기록:
